@@ -29,6 +29,8 @@ while True:
 	x=[datetime.datetime.now() + datetime.timedelta(minutes=i) for i in range(12)]
 	labels=x
 	y=[i+random.gauss(0,1) for i,_ in enumerate(x)]
+	plt.xticks(x,labels, rotation='vertical')
+	plt.show(block=False)
 
 	li.set_ydata(y)
 	fig.canvas.draw()
